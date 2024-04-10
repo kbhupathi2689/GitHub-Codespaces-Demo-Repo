@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+
+trigger:
+- main
+
+pool:
+  #vmImage: Ubuntu-latest
+  name: 'GitHub-Codespaces-Pool'
+
+steps:
+- script: echo Hello, World!
+  displayName: 'Run a one-liner script'
+
+- script: |
+    echo This codespace hostname:
+    echo ------------------------
+    echo $HOSTNAME
+  displayName: 'Run a multi-line script'
